@@ -1,0 +1,42 @@
+Задание 1
+var i = 0;
+
+while (i <= 100){
+  console.log(i);
+  i ++;
+}
+
+Задание 2, Задание 3
+let basket = [
+  {
+    name: 'pen',
+    price: 70,
+    count: 5
+  },
+  {
+    name: 'pencil',
+    price: 30,
+    count: 7
+  },
+  {
+    name: 'paper',
+    price: 500,
+    count: 3
+  },
+]
+
+function countBasketPrice(basket){
+  let basketPrice = 0;
+  for (let i of basket){
+    basketPrice += i.price * i.count;
+  }
+  return basketPrice;
+}
+
+console.log(`Стоимость корзины: ${countBasketPrice(basket)} рублей`);
+
+Задание 4
+for(let i = 0; i < 10; console.log(i), i ++){}
+
+Задание 5
+for(let i = 1, perem = 'x'; i <= 20; console.log(perem), i ++, perem += 'x'){}
