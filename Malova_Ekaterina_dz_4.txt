@@ -1,0 +1,79 @@
+Задание 1
+const num = {
+  'единицы': 0,
+  'десятки': 0,
+  'сотни': 0,
+}
+
+let number = parseInt(promt('Введите число от 0 до 999'));
+
+// let number = 1250;
+
+function numberInObject(number){
+  if (number < 1000){
+    num.единицы = number % 10;
+    num.десятки = (number - number % 10) / 10 % 10;
+    num.сотни = (number - number % 100) / 100;
+    console.log(num)
+  }else{
+    const num_1 = {}
+    console.log('Введен неверный формат\n', num_1);
+  }
+}
+
+numberInObject(number);
+
+Задание 2
+let basket = [
+  {
+    name: 'pen',
+    price: 70,
+    count: 5
+  },
+  {
+    name: 'pencil',
+    price: 30,
+    count: 7
+  },
+  {
+    name: 'paper',
+    price: 500,
+    count: 3
+  },
+]
+
+// const pen = {
+//   name: 'pen',
+//   price: 70,
+//   count: 5,
+// }
+
+// const pencil = {
+//   name: 'pencil',
+//   price: 30,
+//   count: 7,
+// }
+
+// const paper = {
+//   name: 'paper',
+//   price: 500,
+//   count: 3,
+// }
+
+// const basket = {
+//   pen,
+//   pencil,
+//   paper,
+// }
+
+function countBasketPrice(basket){
+  let basketPrice = 0;
+  for (let i of basket){
+    basketPrice += i.price * i.count;
+  }
+  return basketPrice;
+}
+
+console.log(`Стоимость корзины: ${countBasketPrice(basket)} рублей`);
+
+Задание 3
