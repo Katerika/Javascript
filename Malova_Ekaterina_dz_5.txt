@@ -1,0 +1,73 @@
+Задание 1
+const settings = {
+  rowsCount: 9,
+  colsCount: 9,
+  startDirection: 'right',
+  stepInSecond: 5,
+  emptyPositionColor1: black,
+  emptyPositionColor2: white,
+}
+
+function board() {
+  const table = docment.createElement('table');
+
+  for (let row = 0; row < settings.rowsCount; row++){
+    const trElem = docment.createElement('tr');
+    containerElement.append(trElem);
+
+    for (let col = 0; col < settings.colsCount; col++){
+      const tdElem = docment.createElement('td');
+      if (row % 2 == col % 2){
+        settings.emptyPositionColor2;
+      } else {
+        settings.emptyPositionColor1;
+      }
+      trElem.append(tdElem);
+    }
+    table.append(trElem);
+  }
+
+  for (row = 1, col = 0; row < settings.rowsCount; console.log (row), row++){}
+
+  a = [A, B, C, D, E, F, G, H]
+  for (let i in a, row = 0; col < settings.colsCount; console.log (col[i]), col[i++]){}
+}
+
+board();
+
+Задание 2
+let basket = [
+  {
+    name: 'pen',
+    price: 70,
+    count: 5
+  },
+  {
+    name: 'pencil',
+    price: 30,
+    count: 7
+  },
+  {
+    name: 'paper',
+    price: 500,
+    count: 3
+  },
+]
+
+function countBasketPrice(basket){
+  let basketPrice = 0;
+  for (let i of basket){
+    basketPrice += i.price * i.count;
+  }
+  return basketPrice;
+}
+
+function countBasket(basket){
+  let basketCount = 0;
+  for (let i of basket){
+    basketCount += i.count;
+  }
+  return basketCount;
+}
+
+console.log(`В корзине: ${countBasket(basket)} товаров на сумму ${countBasketPrice(basket)} рублей`);
